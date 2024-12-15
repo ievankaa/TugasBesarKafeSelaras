@@ -14,6 +14,18 @@ menngelola administrasi kafe.
 2. Melihat laporan gaji
 3. Melihat laporan kehadiran 
 
+## Cara menjalankan
+1. Git clone https://github.com/ievankaa/TugasBesarKafeSelaras.git
+2. Pastikan sudah download XAMPP dan PHP versi 8.2.4
+3. Download composer 
+4. Jalankan server di XAMPP
+5. Buat database dengan nama cafe_selaras_app di phpMyAdmin
+6. Import file sql yang ada di folder database
+7. Konfigurasi .env untuk database (nama database, username, password)
+8. Di terminal jalankan "composer install", "php artisan migrate", "php artisan serve"
+
+
+
 <p align="center"><a href="https://laravel.com" 
 target="_blank"><img 
 src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
