@@ -48,6 +48,20 @@
         <a href="{{ route('pemilik.laporan_kehadiran') }}"><button class="back">Back</button></a>
       </div>
 
+      <hr class="divider">
+
+      <!-- Container Periode -->
+      <div class="periode">
+        <div class="periode-container">
+          <p><strong>Periode</strong></p>
+          <input type="date" id="startDate" class="date-picker">
+          <span>s.d</span> <input type="date" id="endDate" class="date-picker">
+          <button onclick="applyDateFilter()" class="apply-btn">Terapkan</button>
+        </div>
+      </div>
+
+      <hr class="divider">
+
       <!-- Attendance Table -->
       <div class="table-container">
         <table>
@@ -76,6 +90,62 @@
       </div>
     </main>
   </div>
+  <script>
+    const startDateEl = document.querySelector("#startDate");
+    const endDateEl = document.querySelector("#endDate");
+    const tbody = document.querySelector("tbody");
+
+    const kehadiran = @json($pegawai->kehadiran);
+
+    function applyDateFilter() {
+      const startValue = startDateEl.value;
+      const endValue = endDateEl.value;
+
+      if ((startValue !== '' && endValue === '') || (startValue === '' && endValue !== '')) {
+        return
+      }
+
+      let filterCb = () => true;
+
+      if (startValue !== '') {
+        filterCb = (p) => {
+          const date = new Date(reverseDate(p.date));
+          const startDate = new Date(startValue);
+          const endDate = new Date(endValue);
+
+          return startDate <= date && date <= endDate;
+        }
+      }
+
+      rerenderData(filterCb);
+    }
+
+    function rerenderData(filterCb) {
+      const formattedData = kehadiran.filter(filterCb).map((p, index) => {
+        return `
+           <tr>
+            <td>${index+1}</td>
+            <td>${p.date}</td>
+            <td>${p.fwaktuDatang}</td>
+            <td>${p.fwaktuPulang}</td>
+            <td>${p.totalhours}</td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = formattedData.join("");
+    }
+
+    function reverseDate(date) {
+      if (date === '') {
+        return '';
+      }
+
+      const [a, b, c] = date.split("-");
+
+      return `${c}-${b}-${a}`;
+    }
+  </script>
 </body>
 
 </html>
