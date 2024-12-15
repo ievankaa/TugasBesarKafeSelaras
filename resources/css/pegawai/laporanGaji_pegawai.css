@@ -1,0 +1,123 @@
+@import url('shared.css'); 
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f1;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 32px; /* Ukuran font lebih besar seperti h1 di Absensi Pegawai */
+    color: #333; /* Warna teks lebih gelap */
+    margin: 0; /* Menghilangkan margin default */
+    line-height: 1.2; /* Menyesuaikan tinggi baris */
+}
+
+.periode {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    color: #555;
+}
+
+/* Container Periode (Input Tanggal) */
+.periode-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.date-picker {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.apply-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d79e5d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #a9824b;
+}
+
+/* Tabel Gaji */
+.laporan-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gaji-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.gaji-table th, .gaji-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.gaji-table th {
+    background-color: #f8f8f8;
+}
+
+.gaji-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.gaji-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling untuk No, Tanggal, dan lainnya */
+.gaji-table th, .gaji-table td {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:visited {
+    color: #333; /* Menjaga warna teks hitam saat link diklik */
+}
+
+a:hover {
+    color: #555; /* Efek hover */
+}
