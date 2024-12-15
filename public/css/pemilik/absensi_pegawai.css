@@ -1,0 +1,175 @@
+@import url('shared.css'); /* Mengimpor file global */
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f1;
+}
+
+/* Container Utama */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Konten Utama */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 32px; /* Ukuran font besar seperti h1 */
+    color: #333; /* Warna teks lebih gelap */
+    margin: 0; /* Hilangkan margin default */
+    line-height: 1.2; /* Tinggi baris untuk proporsi teks */
+}
+
+
+.header .periode {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    color: #555;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:visited {
+    color: #333; /* Menjaga warna teks hitam saat link diklik */
+}
+
+a:hover {
+    color: #555; /* Efek hover */
+}
+
+/* Container untuk Absensi */
+.absensi-container {
+    background-color: #ffffff;
+    padding: 40px; /* Tambahkan padding untuk ruang di dalam */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 400px; /* Tambahkan tinggi minimum */
+}
+
+/* Informasi Pegawai */
+.info-pegawai {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.foto-pegawai {
+    width: 100px; /* Ukuran lebih besar */
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #ddd;
+}
+
+.info-detail {
+    text-align: left;
+}
+
+.jabatan .badge {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nama-pegawai {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 0;
+}
+
+/* Informasi Tanggal dan Waktu */
+.tanggal-waktu {
+    margin-bottom: 20px;
+}
+
+.tanggal {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.waktu {
+    font-size: 26px; /* Font lebih besar */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tombol Absensi */
+.absensi-buttons {
+    margin-top: 20px;
+}
+
+.absensi-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.absensi-btn:hover {
+    opacity: 0.9; /* Efek hover */
+}
+
+.absensi-btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+/* Status Tombol */
+.absensi-btn:nth-child(1) {
+    background-color: #4CAF50;
+}
+
+#btnAbsensiMasuk:disabled{
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.absensi-btn:nth-child(2) {
+    background-color: #f44336;
+}
+
+#btnAbsensiKeluar:enabled{
+    background-color: #f44336;
+}
+.status-text {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
