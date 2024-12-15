@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kafe Selaras Web</title>
   <link rel="stylesheet" href="{{ asset('css/pemilik/style_login_pegawai.css') }}">
+
+  <style>
+    .image-section {
+      position: absolute; /* Atau relative, fixed, dll, sesuai kebutuhan */
+      bottom: 0; /* Menempatkan gambar di bagian bawah */
+      right: 0; /* Bisa menambahkan untuk menempatkan gambar di kiri */
+    }
+  </style>
 </head>
 
 <body>
@@ -41,7 +49,7 @@
         </form>
       </div>
     </div>
-    <img class="image-section" src="{{ asset('img/v5568_308.png') }}" alt="Example Image" width=500 height=500 position=bottom>
+    <img class="image-section" src="{{ asset('img/v5568_308.png') }}" alt="Example Image" width=700 height=500>
   </div>
 
   <!-- Pindahkan script ke file eksternal -->
