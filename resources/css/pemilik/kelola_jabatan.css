@@ -1,0 +1,345 @@
+@import url('shared.css'); /* Mengimpor file global */
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f1;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar 
+.sidebar {
+    width: 250px;
+    background-color: #f2e9e4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a4532;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item.active {
+    background-color: #e4d6c8;
+    border-radius: 5px;
+}
+
+.menu-item.sign-out {
+    margin-top: auto;
+    color: #b22222;
+} */
+
+/* Submenu */
+.sub-menu {
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sub-menu-item {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sub-menu-item.active {
+    background-color: #e4d6c8;
+    font-weight: bold;
+    color: #5a4532;
+}
+
+.sub-menu-item:hover {
+    background-color: #d3c2b5;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #5a4532;
+    margin-bottom: 20px;
+    text-align: center; /* Centered the header */
+}
+/* Table Styles */
+.jabatan-table, .pegawai-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.jabatan-table th, .pegawai-table th,
+.jabatan-table td, .pegawai-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.jabatan-table th, .pegawai-table th {
+    background-color: #f2e9e4;
+    color: #5a4532;
+}
+
+.details-button {
+    background-color: #d7b89c;
+    border: none;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-button {
+    background-color: #a26a42;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-button:hover {
+    background-color: #8a5435;
+}
+
+/*menghilangkan garis bawah pada semua link*/
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menjaga warna teks hitam saat link diklik */
+a:visited {
+    color: #333;
+}
+
+/* Menambahkan hover style */
+a:hover {
+    color: #555; /* Menambahkan efek warna lebih gelap saat hover*/
+}
+
+/* Container Popup */
+.popup-content {
+    background: #fff; /* Warna latar putih */
+    padding: 20px; /* Ruang dalam */
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+    width: 400px; /* Lebar tetap */
+    margin: 0 auto; /* Pusatkan popup */
+    font-family: Arial, sans-serif; /* Gaya font */
+    text-align: center; /* Memusatkan teks di header */
+}
+
+/* Header Popup */
+.popup-content h2 {
+    font-size: 20px; /* Ukuran judul */
+    color: #333; /* Warna teks */
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+.popup-content .form-group {
+    margin-bottom: 15px; /* Ruang antar form group */
+    text-align: left; /* Rata kiri */
+}
+
+.popup-content .form-group label {
+    display: block;
+    font-size: 14px; /* Ukuran label */
+    color: #555; /* Warna label */
+    margin-bottom: 5px;
+}
+
+.popup-content .form-group input {
+    width: 100%; /* Lebar penuh */
+    height: 45px; /* Tinggi input */
+    padding: 10px; /* Ruang dalam input */
+    font-size: 14px; /* Ukuran teks */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+    box-sizing: border-box; /* Hitungan padding */
+}
+
+/* Tombol */
+.popup-content button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tombol Cancel */
+.popup-content .cancel-button {
+    background: #f5f5f5; /* Warna abu-abu terang */
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Tombol Confirm */
+.popup-content .submit-button {
+    background: #a0522d; /* Warna cokelat */
+    color: #fff;
+}
+
+/* Hover Effects */
+.popup-content .cancel-button:hover {
+    background: #e0e0e0; /* Warna abu lebih gelap */
+}
+
+.popup-content .submit-button:hover {
+    background: #8b4513; /* Warna cokelat lebih gelap */
+}
+
+/* Mengatur lebar dan tinggi input teks */
+.popup-content .form-group input {
+    width: 100%; /* Atur lebar sesuai kebutuhan, misal 100% untuk menyesuaikan dengan container */
+    height: 40px; /* Atur tinggi input teks */
+    padding: 10px; /* Memberi ruang di dalam input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Ukuran teks dalam input */
+    box-sizing: border-box; /* Memastikan padding tidak menambah total ukuran */
+}
+
+/* Contoh spesifik untuk input jabatan atau gaji */
+#jabatan, #gaji {
+    width: 90%; /* Atur lebar khusus jika diperlukan */
+    max-width: 400px; /* Membatasi lebar maksimal */
+    height: 45px; /* Tinggi khusus untuk input */
+    margin: 5px auto; /* Memberi margin otomatis (opsional) */
+    font-size: 16px; /* Ukuran font lebih besar */
+}
+
+/* Popup Container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Sembunyikan Popup Secara Default */
+.hidden {
+    display: none;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pegawai-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.pegawai-table th, .pegawai-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.pegawai-table th {
+    background: #f4f4f4;
+}
+
+.cancel-button {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #d32f2f;
+}
+
+/* Tabel pegawai */
+.pegawai-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff7eb;
+}
+
+.pegawai-table th,
+.pegawai-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.pegawai-table th {
+    background-color: #d6b8a6;
+    color: #6a422e;
+}
+
+.pegawai-table tr:hover {
+    background-color: #fdeacc;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,165 @@
+/* Menggunakan shared.css untuk sidebar */
+@import url('shared.css');
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f1;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;  /* Memastikan lebar 100% */
+    max-width: 100%;  /* Maksimal lebar kontainer */
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Efek bayangan untuk konten utama */
+    border-radius: 10px;  /* Sudut membulat pada konten utama */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;  /* Memberikan jarak dari sidebar (menyesuaikan lebar sidebar) */
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Container Info Pegawai */
+.pegawai-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.foto-pegawai {
+    width: 120px; /* Ukuran lebih besar untuk foto */
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #ddd;
+}
+
+.info-pegawai {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.info-row {
+    margin: 10px 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #333;
+}
+
+/* Garis Pemisah */
+.divider {
+    border-top: 2px solid #8b5e3c;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.periode-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.periode {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-picker {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.apply-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d79e5d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #a9824b;
+}
+
+/* Tabel Laporan Kehadiran */
+.kehadiran-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.kehadiran-table th, .kehadiran-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.kehadiran-table th {
+    background-color: #f8f8f8;
+}
+
+.kehadiran-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.kehadiran-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.kehadiran-table th, .kehadiran-table td {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    color: #555;
+}

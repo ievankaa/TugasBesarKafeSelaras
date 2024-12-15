@@ -1,0 +1,100 @@
+/* Sidebar Global Styles */
+.sidebar {
+    width: 250px; /* Konsisten di semua file */
+    background-color: #f2e9e4;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border-left 0.3s ease; /* Menambahkan transisi halus */
+    border-left: 4px solid transparent; /* Garis kosong awal */
+}
+
+/* Efek hover: Menambahkan garis cokelat gelap di samping */
+.menu-item:hover {
+    background-color: #e4d6c8; /* Warna latar belakang saat hover */
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-item.active {
+    background-color: #e4d6c8;
+    border-radius: 5px;
+    border-left: 4px solid #8b4513; /* Garis cokelat gelap yang mengikuti menu aktif */
+}
+
+.menu-item.sign-out {
+    margin-top: auto;
+    color: #b22222;
+}
+
+/* Efek hover pada "Sign Out": hanya mengubah warna teks */
+.menu-item.sign-out:hover {
+    color: #b22222; /* Warna merah tebal pada hover */
+    font-weight: bold; /* Menjadikan teks lebih tebal */
+    background-color: transparent; /* Tidak ada perubahan pada latar belakang */
+}
+
+/* Submenu Global Styles */
+.sub-menu {
+    display: none; /* Submenu tersembunyi secara default */
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 20px;
+    background-color: #f2e9e4; /* Latar belakang submenu */
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+/* Submenu Items */
+.sub-menu-item {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Efek transisi halus */
+}
+
+/* garis cokelat di tombol sub menu*/
+.sub-menu-item.active {
+    background-color: #e4d6c8;
+    border-radius: 5px;
+    border-left: 4px solid #8b4513; /* Garis cokelat gelap yang mengikuti menu aktif */
+}
+
+/* Efek hover pada submenu */
+.sub-menu-item:hover {
+    background-color: #e4d6c8;
+}
+
+/* Menampilkan submenu ketika item menu di-klik */
+.menu-item.active + .sub-menu {
+    display: flex;
+}
+
+/* Menambahkan transisi pada submenu untuk efek buka/tutup */
+.sub-menu {
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    overflow: hidden;
+}
+
+/* Menangani saat submenu terbuka */
+.menu-item.active + .sub-menu.open {
+    display: flex;
+    max-height: 500px; /* Maksimal tinggi submenu */
+    padding: 10px;
+}

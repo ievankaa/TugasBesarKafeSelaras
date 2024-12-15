@@ -1,0 +1,141 @@
+@import url('shared.css'); /* Mengimpor file global */
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f1;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar 
+.sidebar {
+    width: 250px;
+    background-color: #f2e9e4;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-item.active {
+    background-color: #e4d6c8;
+    border-radius: 5px;
+}
+
+.menu-item.sign-out {
+    margin-top: auto;
+    color: #b22222;
+} */
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    color: #444;
+}
+
+.header .periode {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    color: #555;
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-container th, .table-container td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.table-container th {
+    background-color: #f9f7f5;
+    font-weight: bold;
+}
+
+.table-container tr:hover td {
+    background-color: #f4f1ee;
+}
+
+.view-details {
+    background-color: #d7b89c;
+    border: none;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*menghilangkan garis bawah pada semua link*/
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menjaga warna teks hitam saat link diklik */
+a:visited {
+    color: #333;
+}
+
+/* Menambahkan hover style */
+a:hover {
+    color: #555; /* Menambahkan efek warna lebih gelap saat hover*/
+}
+
